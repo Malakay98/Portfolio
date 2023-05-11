@@ -1,18 +1,14 @@
-* {
-    padding: 0;
-    margin: 0;
-}
+
 
 :root {
     --color1: #ffffff;
     --color2: #001515;
-    --color3: #3291d4;
+    --color3: #40c6dd;
 }
 
 body {
     /* background-image: linear-gradient(180deg, var(--color2) 40%, var(--color3) 100%); */
     background-color: var(--color2);
-    height: 100vh;
     color: var(--color1);
 }
 
@@ -94,20 +90,23 @@ header nav .logo .backward {
 }
 
 main #about {
-    margin: 20px auto;
-    width: 90%;
+    margin: 20px 20px auto;
 }
 
 main #projects {
-    margin: 20px auto;
-    width: 90%;
+    margin: 20px 20px auto;
+}
+
+main #socials {
+    margin: 20px 20px auto;
 }
 
 /*  CARDS PROJECTS */
 
 .card {
     border: 1px solid red;
-    margin: 10px auto;
+    margin: 10px;
+    flex: 1 1 300px;
     background: rgba(255, 255, 255, 0.2);
     border-radius: 16px;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
@@ -118,4 +117,77 @@ main #projects {
 
 .btn-primary {
     background-color: #3291d4;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+}
+
+
+/*  SOCIALS MEDIA */
+
+main #socials ul {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+main #socials ul li {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.fa-brands {
+    font-size: 7rem;
+    margin: 20px 20px auto;
+    color: var(--color3);
+}
+
+.fa-brands:hover {
+    transition: 0.5s ease-in-out;
+    transform: rotate(360deg);
+}
+
+.fa-square-github:hover {
+    color: #ffffff;
+}
+
+.fa-linkedin:hover {
+    color: #0077b5;
+}
+
+.fa-youtube:hover {
+    color: #FF0000;
+}
+
+
+/* FOOTER */
+footer {
+    padding: 10px;
+    text-align: center;
+    font-size: 16px;
+    color: var(--color1);
+    margin-top: 50px;
+    background: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+}
+
+footer p {
+    margin: 10px;
+}
+
+footer a {
+    color: var(--color3);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+footer a:hover {
+    color: #175e91;
 }
