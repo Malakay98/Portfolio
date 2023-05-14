@@ -1,9 +1,9 @@
 
 
 :root {
-    --color1: #ffffff;
-    --color2: #001515;
-    --color3: #40c6dd;
+    --color1: #000000;
+    --color2: #ffffff;
+    --color3: #8d2727;
 }
 
 body {
@@ -51,6 +51,14 @@ header nav:first-of-type ul li a {
     text-transform: uppercase;
 }
 
+header nav:first-of-type ul li a:hover {
+    color: var(--color3);
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+
 header nav:first-of-type ul li a::after {
     content: "";
     width: 0%;
@@ -63,6 +71,7 @@ header nav:first-of-type ul li a::after {
 
 header nav:first-of-type ul li a:hover::after {
     width: 100%;
+    background: var(--color3);
 }
 
 /* Styling for the second nav */
@@ -73,6 +82,11 @@ header nav .logo {
     font-size: 42px;
     -webkit-text-stroke: 1px black;
     cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+header nav .logo:hover {
+    color: var(--color3);
 }
 
 header nav .logo p {
@@ -107,7 +121,7 @@ main #socials {
     border: 1px solid red;
     margin: 10px;
     flex: 1 1 300px;
-    background: rgba(255, 255, 255, 0.2);
+    background: rgba(109, 17, 17, 0.212);
     border-radius: 16px;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(5px);
@@ -115,8 +129,18 @@ main #socials {
     border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
+.card:hover {
+    border: 1.5px solid rgb(224, 24, 24);
+}
+
 .btn-primary {
-    background-color: #3291d4;
+    background-color: var(--color3);
+    border: none;
+}
+
+.btn-primary:hover {
+    background-color: #9e0909;
+    border: none;
 }
 
 .row {
@@ -153,14 +177,14 @@ main #socials ul li {
 }
 
 .fa-square-github:hover {
-    color: #ffffff;
+    color: #000000;
 }
 
 .fa-linkedin:hover {
     color: #0077b5;
 }
 
-.fa-youtube:hover {
+.fa-square-youtube:hover {
     color: #FF0000;
 }
 
@@ -172,7 +196,7 @@ footer {
     font-size: 16px;
     color: var(--color1);
     margin-top: 50px;
-    background: rgba(255, 255, 255, 0.2);
+    background: rgba(109, 17, 17, 0.212);
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(5px);
     -webkit-backdrop-filter: blur(5px);
@@ -189,5 +213,5 @@ footer a {
 }
 
 footer a:hover {
-    color: #175e91;
+    color: #cf684e;;
 }
