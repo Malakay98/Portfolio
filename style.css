@@ -1,9 +1,7 @@
-
-
 :root {
     --color1: #000000;
-    --color2: #ffffff;
-    --color3: #8d2727;
+    --color2: #f3f3f3;
+    --color3: #2961ac;
 }
 
 body {
@@ -17,6 +15,7 @@ h2,
 h3,
 a {
     font-family: 'Poppins', sans-serif;
+    text-decoration: none;
 }
 
 p {
@@ -32,26 +31,26 @@ header {
 }
 
 /* Styling for the first nav */
-header nav:first-of-type ul {
+header nav ul {
     display: flex;
     list-style: none;
 }
 
-header nav:first-of-type ul li {
+header nav ul li {
     margin-right: 20px;
 }
 
-header nav:first-of-type ul li:last-child {
+header nav ul li:last-child {
     margin-right: 0;
 }
 
-header nav:first-of-type ul li a {
+header nav ul li a {
     color: var(--color1);
     text-decoration: none;
     text-transform: uppercase;
 }
 
-header nav:first-of-type ul li a:hover {
+header nav ul li .special:hover {
     color: var(--color3);
     text-decoration: none;
     text-transform: uppercase;
@@ -59,7 +58,7 @@ header nav:first-of-type ul li a:hover {
 }
 
 
-header nav:first-of-type ul li a::after {
+header nav ul li .special::after {
     content: "";
     width: 0%;
     height: 2.5px;
@@ -69,9 +68,32 @@ header nav:first-of-type ul li a::after {
     transition: 0.5s ease-in-out;
 }
 
-header nav:first-of-type ul li a:hover::after {
+header nav ul li .special:hover::after {
     width: 100%;
     background: var(--color3);
+}
+
+
+.fa-brands {
+    font-size: 1.1rem;
+    color: var(--color3);
+}
+
+.fa-brands:hover {
+    transition: 0.5s ease-in-out;
+    transform: rotate(360deg);
+}
+
+.fa-github:hover {
+    color: #000000;
+}
+
+.fa-linkedin-in:hover {
+    color: #0077b5;
+}
+
+.fa-youtube:hover {
+    color: #FF0000;
 }
 
 /* Styling for the second nav */
@@ -85,52 +107,64 @@ header nav .logo {
     transition: 0.3s ease-in-out;
 }
 
+header nav .logo img {
+    width: 50px;
+    height: 50px;
+}
+
 header nav .logo:hover {
     color: var(--color3);
 }
 
-header nav .logo p {
-    font-family: 'Zen Dots', cursive;
-}
+/* Main body */
 
-/* Styling for the second nav */
-
-header nav .logo p:first-of-type {
-    transform: scaleX(-1);
-}
-
-header nav .logo .backward {
-    transform: scaleX(-1);
+main {
+    display: flex;
+    margin-top: 5%;
 }
 
 main #about {
     margin: 20px 20px auto;
 }
 
-main #projects {
-    margin: 20px 20px auto;
+main #about h1 {
+    font-weight: bold;
 }
 
-main #socials {
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     margin: 20px 20px auto;
+    height: 550px;
+    overflow: auto;
+}
+
+/* Hide scrollbar for Chrome, Safari, and Opera */
+.row::-webkit-scrollbar {
+    display: none;
+}
+
+/* Hide scrollbar for IE, Edge, and Firefox */
+.row {
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */
 }
 
 /*  CARDS PROJECTS */
 
 .card {
-    border: 1px solid red;
     margin: 10px;
-    flex: 1 1 300px;
-    background: rgba(109, 17, 17, 0.212);
+    width: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    color: var(--color2);
     border-radius: 16px;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(5px);
     -webkit-backdrop-filter: blur(5px);
     border: 1px solid rgba(255, 255, 255, 0.3);
-}
-
-.card:hover {
-    border: 1.5px solid rgb(224, 24, 24);
 }
 
 .btn-primary {
@@ -139,64 +173,23 @@ main #socials {
 }
 
 .btn-primary:hover {
-    background-color: #9e0909;
+    background-color: #3099d6;
     border: none;
-}
-
-.row {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: stretch;
-}
-
-
-/*  SOCIALS MEDIA */
-
-main #socials ul {
-    display: flex;
-    justify-content: center;
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-}
-
-main #socials ul li {
-    display: inline-block;
-    margin-right: 10px;
-}
-
-.fa-brands {
-    font-size: 7rem;
-    margin: 20px 20px auto;
-    color: var(--color3);
-}
-
-.fa-brands:hover {
-    transition: 0.5s ease-in-out;
-    transform: rotate(360deg);
-}
-
-.fa-square-github:hover {
-    color: #000000;
-}
-
-.fa-linkedin:hover {
-    color: #0077b5;
-}
-
-.fa-square-youtube:hover {
-    color: #FF0000;
 }
 
 
 /* FOOTER */
 footer {
-    padding: 10px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 9rem;
+    padding: 30px;
     text-align: center;
     font-size: 16px;
-    color: var(--color1);
-    margin-top: 50px;
-    background: rgba(109, 17, 17, 0.212);
+    color: var(--color2);
+    margin-top: auto;
+    background: rgb(0, 0, 0);
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(5px);
     -webkit-backdrop-filter: blur(5px);
@@ -213,5 +206,12 @@ footer a {
 }
 
 footer a:hover {
-    color: #cf684e;;
+    color: #377cfa;
+}
+
+
+/* ABOUT PAGE */
+
+#about {
+    margin: auto;
 }
