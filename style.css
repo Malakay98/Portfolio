@@ -1,6 +1,6 @@
 :root {
     --color1: #000000;
-    --color2: #f3f3f3;
+    --color2: #ffffff;
     --color3: #2961ac;
 }
 
@@ -28,6 +28,8 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
 }
 
 /* Styling for the first nav */
@@ -127,6 +129,10 @@ main #about {
     margin: 20px 20px auto;
 }
 
+main #projects {
+    margin: 20px 20px auto;
+}
+
 main #about h1 {
     font-weight: bold;
 }
@@ -173,7 +179,7 @@ main #about h1 {
 }
 
 .btn-primary:hover {
-    background-color: #3099d6;
+    background-color: #1d4be4;
     border: none;
 }
 
@@ -214,4 +220,36 @@ footer a:hover {
 
 #about {
     margin: auto;
+}
+
+
+
+/* MOBILE */
+
+@media only screen and (max-width: 820px) {
+    main {
+        display: flex;
+        flex-direction: column;
+        min-height: calc(100vh - 9rem);
+        /* Subtract footer height */
+        padding-bottom: 9rem;
+        /* Added */
+        box-sizing: border-box;
+        /* Added */
+    }
+
+    main #about {
+        margin: 40px 40px auto;
+    }
+    
+    main #projects {
+        margin: 40px 40px auto;
+    }
+
+    footer {
+        position: fixed;
+        /* Changed to fixed */
+        bottom: 0;
+        left: 0;
+    }
 }
