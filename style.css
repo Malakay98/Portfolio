@@ -8,6 +8,9 @@ body {
     /* background-image: linear-gradient(180deg, var(--color2) 40%, var(--color3) 100%); */
     background-color: var(--color2);
     color: var(--color1);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 h1,
@@ -27,19 +30,20 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px;
-    margin-left: 10px;
-    margin-right: 10px;
+    padding: 20px;
 }
 
 /* Styling for the first nav */
 header nav ul {
     display: flex;
     list-style: none;
+    align-items: center;
 }
 
 header nav ul li {
     margin-right: 20px;
+    flex-grow: 1;
+    margin-top: 10px;
 }
 
 header nav ul li:last-child {
@@ -54,7 +58,6 @@ header nav ul li a {
 
 header nav ul li .special:hover {
     color: var(--color3);
-    text-decoration: none;
     text-transform: uppercase;
     font-weight: bold;
 }
@@ -66,7 +69,6 @@ header nav ul li .special::after {
     height: 2.5px;
     background: var(--color1);
     display: block;
-    margin: auto;
     transition: 0.5s ease-in-out;
 }
 
@@ -100,13 +102,8 @@ header nav ul li .special:hover::after {
 
 /* Styling for the second nav */
 header nav .logo {
-    margin-right: 5px;
     display: flex;
     align-items: center;
-    font-size: 42px;
-    -webkit-text-stroke: 1px black;
-    cursor: pointer;
-    transition: 0.3s ease-in-out;
 }
 
 header nav .logo img {
@@ -114,15 +111,12 @@ header nav .logo img {
     height: 50px;
 }
 
-header nav .logo:hover {
-    color: var(--color3);
-}
 
 /* Main body */
 
 main {
+    flex-grow: 1;
     display: flex;
-    margin-top: 5%;
 }
 
 main #about {
@@ -133,30 +127,31 @@ main #projects {
     margin: 20px 20px auto;
 }
 
+main #projects p {
+    margin: 10px auto;
+    text-align: center;
+}
+
 main #about h1 {
     font-weight: bold;
 }
 
 .row {
+    /* Hide scrollbar */
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    margin: 20px 20px auto;
-    height: 550px;
+    height: 60vh;
     overflow: auto;
 }
 
 /* Hide scrollbar for Chrome, Safari, and Opera */
 .row::-webkit-scrollbar {
     display: none;
-}
-
-/* Hide scrollbar for IE, Edge, and Firefox */
-.row {
-    -ms-overflow-style: none;
-    /* IE and Edge */
-    scrollbar-width: none;
-    /* Firefox */
 }
 
 /*  CARDS PROJECTS */
@@ -186,15 +181,11 @@ main #about h1 {
 
 /* FOOTER */
 footer {
-    position: absolute;
-    bottom: 0;
     width: 100%;
-    height: 9rem;
-    padding: 30px;
+    padding: 10px;
     text-align: center;
     font-size: 16px;
     color: var(--color2);
-    margin-top: auto;
     background: rgb(0, 0, 0);
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(5px);
@@ -212,7 +203,7 @@ footer a {
 }
 
 footer a:hover {
-    color: #377cfa;
+    color: #163b7e;
 }
 
 
@@ -241,7 +232,7 @@ footer a:hover {
     main #about {
         margin: 40px 40px auto;
     }
-    
+
     main #projects {
         margin: 40px 40px auto;
     }
