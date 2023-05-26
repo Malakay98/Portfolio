@@ -83,7 +83,17 @@ header nav ul li .special:hover::after {
     color: var(--color3);
 }
 
+.fa-solid {
+    font-size: 1.1rem;
+    color: var(--color3);
+}
+
 .fa-brands:hover {
+    transition: 0.5s ease-in-out;
+    transform: rotate(360deg);
+}
+
+.fa-solid:hover {
     transition: 0.5s ease-in-out;
     transform: rotate(360deg);
 }
@@ -96,8 +106,10 @@ header nav ul li .special:hover::after {
     color: #0077b5;
 }
 
-.fa-youtube:hover {
-    color: #FF0000;
+.fa-envelope:hover {
+    background: linear-gradient(to right, #3E65CF 10%, #C71610 40%, #F2A60C 20%, #3B60C4 50%, #08851b 80%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 /* Styling for the second nav */
@@ -123,6 +135,15 @@ main #about {
     margin: 20px 20px auto;
 }
 
+#about-me {
+    margin: 20px auto;
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
 main #projects {
     margin: 20px 20px auto;
 }
@@ -133,6 +154,10 @@ main #projects p {
 }
 
 main #about h1 {
+    font-weight: bold;
+}
+
+main #about-me h1 {
     font-weight: bold;
 }
 
